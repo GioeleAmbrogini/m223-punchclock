@@ -18,4 +18,12 @@ public class EntryResourceTest {
              .body(is("[]"));
     }
 
+    @Test
+    public void testDeleteEndpoint() {
+        given()
+            .when().get("/entries/delete/1")
+            .header('Content-type', 'application/json')
+            .then()
+                .statusCode(204);
+    }
 }
