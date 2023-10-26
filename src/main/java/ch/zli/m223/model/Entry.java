@@ -23,6 +23,10 @@ public class Entry {
   @Fetch(FetchMode.JOIN)
   private Category category;
 
+  @ManyToOne(optional = false)
+  @Fetch(FetchMode.JOIN)
+  private ApplicationUser applicationUser;
+
   public Category getCategory() {
     return category;
   }
