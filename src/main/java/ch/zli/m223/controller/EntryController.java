@@ -51,7 +51,7 @@ public class EntryController {
 
     @PUT
     @Produces(MediaType.APPLICATION_JSON)
-    @Path("/update/{id}")
+    @Path("/{id}")
     @Operation(summary = "Updates an entry", description = "Updates a entry by its id")
     public Entry update(@PathParam("id") Long id, Entry entry) {
         return entryService.updateEntry(id, entry);
