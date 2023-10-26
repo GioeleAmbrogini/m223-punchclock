@@ -23,6 +23,20 @@ public class Entry {
   @Fetch(FetchMode.JOIN)
   private Category category;
 
+  public Category getCategory() {
+    return category;
+  }
+
+  public void setCategory(Category category) {
+    this.category = category;
+  }
+
+  @Column(nullable = false)
+  private LocalDateTime checkIn;
+
+  @Column(nullable = false)
+  private LocalDateTime checkOut;
+
   @ManyToMany
   @JoinTable(
     name = "entry_tags",
@@ -33,11 +47,13 @@ public class Entry {
   @Fetch(FetchMode.JOIN)
   private List<Tag> tags;
 
-  @Column(nullable = false)
-  private LocalDateTime checkIn;
+  public List<Tag> getTags() {
+    return tags;
+  }
 
-  @Column(nullable = false)
-  private LocalDateTime checkOut;
+  public void setTags(List<Tag> tags) {
+    this.tags = tags;
+  }
 
   public Long getId() {
     return id;
