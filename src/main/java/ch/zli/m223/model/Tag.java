@@ -5,10 +5,6 @@ import java.util.*;
 import javax.persistence.*;
 
 import org.eclipse.microprofile.openapi.annotations.media.Schema;
-import org.hibernate.annotations.Fetch;
-import org.hibernate.annotations.FetchMode;
-
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 @Entity
 @Table(name="Tag")
